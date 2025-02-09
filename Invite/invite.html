@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+        h1 {
+            color: #d63384;
+            font-size: 28px;
+        }
+        .heart {
+            color: red;
+            font-size: 60px;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 20px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+            position: relative;
+        }
+        .yes {
+            background: #ff4d6d;
+            color: white;
+            box-shadow: 0 4px 10px rgba(255, 77, 109, 0.4);
+        }
+        .yes:hover {
+            background: #e63950;
+            transform: scale(1.1);
+        }
+        .no {
+            background: #ccc;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be My Valentine? <span class="heart">❤</span></h1>
+        <div class="buttons">
+            <button class="yes" onclick="goToNextPage()">Yes</button>
+            <button class="no" onmouseover="moveButton(this)">No</button>
+        </div>
+    </div>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = 'valentine-surprise.html';
+        }
+
+        function moveButton(button) {
+            let x = Math.random() * (window.innerWidth - button.clientWidth - 50);
+            let y = Math.random() * (window.innerHeight - button.clientHeight - 50);
+            button.style.position = 'absolute';
+            button.style.left = x + 'px';
+            button.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>

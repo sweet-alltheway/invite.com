@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Valentine Surprise</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            color: #d63384;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        .heart {
+            font-size: 60px;
+            color: red;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(255, 77, 109, 0.4);
+        }
+        .button:hover {
+            background: #e63950;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yay! You said YES! <span class="heart">❤</span></h1>
+        <p>I'm so happy! You're the best thing that ever happened to me. Happy Valentine's Day, my Palangga! 💖</p>
+        <button class="button" onclick="goBack()">Back to Main Page</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = 'invite.html';
+        }
+    </script>
+</body>
+</html>
